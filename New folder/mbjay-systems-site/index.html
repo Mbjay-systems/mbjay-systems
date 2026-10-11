@@ -9,7 +9,7 @@
 </head>
 <body>
   <header class="container nav">
-    <a class="logo" href="index.html">BAM<span> Agency</span></a>
+    <a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a>
     <nav class="navlinks" aria-label="Main navigation">
       <a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav>
@@ -49,15 +49,50 @@
 
     <section class="container section">
       <div class="section-head">
-        <div><div class="eyebrow">What we do</div><h2>Growth takes more than a good-looking website.</h2></div>
-        <p>Your website starts the conversation. Your lead system captures interest. Your follow-up keeps it moving. We help connect those pieces.</p>
+        <div><div class="eyebrow">Where we get to work</div><h2>Four practical levers for business momentum.</h2></div>
+        <p>Start with the part your business needs most, then connect the next piece when the time is right.</p>
       </div>
-      <div class="grid3">
-        <article class="card"><div class="num">01</div><h3>Websites that make sense</h3><p>Explain what you do, build confidence and make the next step clear on every screen.</p></article>
-        <article class="card"><div class="num">02</div><h3>Lead systems that stay organised</h3><p>Bring enquiries, pipelines and follow-up into a process your team can actually use.</p></article>
-        <article class="card"><div class="num">03</div><h3>Automation that saves effort</h3><p>Reduce repetitive work with practical workflows built around how your business operates.</p></article>
+      <div class="pillars">
+        <article class="pillar"><span class="pillar-kicker">01 / DIGITAL PRESENCE</span><h3>Build.</h3><strong>Make the offer easy to understand.</strong><p>Websites and landing pages that build confidence and make the next step easy to find.</p><div class="pillar-tags"><span>Website design</span><span>Landing pages</span><span>Responsive build</span></div></article>
+        <article class="pillar"><span class="pillar-kicker">02 / LEAD FLOW</span><h3>Capture.</h3><strong>Give new enquiries somewhere to go.</strong><p>Lead forms and CRM setup that help keep opportunities organised.</p><div class="pillar-tags"><span>Lead capture</span><span>CRM setup</span><span>Pipeline design</span></div></article>
+        <article class="pillar"><span class="pillar-kicker">03 / CUSTOMER CARE</span><h3>Follow through.</h3><strong>Make the next conversation easier.</strong><p>Practical processes for timely replies, clear handoffs and consistent follow-up.</p><div class="pillar-tags"><span>Customer journeys</span><span>Reminders</span><span>Integrations</span></div></article>
+        <article class="pillar"><span class="pillar-kicker">04 / OPERATIONS</span><h3>Automate.</h3><strong>Take friction out of repeat work.</strong><p>Useful automation and AI workflows shaped around the way your business operates.</p><div class="pillar-tags"><span>Workflow automation</span><span>AI workflows</span><span>Tool connections</span></div></article>
       </div>
       <a class="text-link" href="services.html">Explore the services <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="difference-section">
+      <div class="container section">
+        <div class="difference-intro">
+          <div class="eyebrow">More than a good first impression</div>
+          <h2>A website can look good and still leave <em>business on the table.</em></h2>
+          <p>The difference is what happens before a visitor arrives, when they decide whether to reach out, and after an enquiry comes in.</p>
+        </div>
+        <div class="comparison" role="table" aria-label="A polished website compared with a connected customer journey">
+          <div class="comparison-head comparison-row" role="row"><span role="columnheader">The detail</span><span role="columnheader">Looks polished</span><span role="columnheader">Built to move things forward</span></div>
+          <div class="comparison-row" role="row"><strong role="rowheader">Positioning</strong><span class="comparison-basic" role="cell">A good-looking homepage.</span><span class="comparison-strong" role="cell">A clear offer for the right kind of customer.</span></div>
+          <div class="comparison-row" role="row"><strong role="rowheader">Next step</strong><span class="comparison-basic" role="cell">A button with no clear reason to click.</span><span class="comparison-strong" role="cell">A useful action placed where visitors need it.</span></div>
+          <div class="comparison-row" role="row"><strong role="rowheader">Enquiries</strong><span class="comparison-basic" role="cell">Messages arrive and wait in an inbox.</span><span class="comparison-strong" role="cell">A clear process for capturing and following up.</span></div>
+          <div class="comparison-row" role="row"><strong role="rowheader">The system</strong><span class="comparison-basic" role="cell">A website disconnected from daily work.</span><span class="comparison-strong" role="cell">Website, lead management and follow-up planned together.</span></div>
+        </div>
+        <a class="text-link" href="services.html">See how BAM connects the pieces ↗</a>
+      </div>
+    </section>
+
+    <section class="site-check">
+      <div class="container section">
+        <div class="site-check-panel">
+          <div class="site-check-copy"><div class="eyebrow">A useful place to start</div><h2>See what your website could improve.</h2><p>Run a free Google PageSpeed Insights check for performance, accessibility and SEO suggestions on mobile and desktop.</p></div>
+          <div>
+            <form class="site-check-form" action="https://pagespeed.web.dev/report" method="get" target="_blank">
+              <label class="sr-only" for="site-check-url">Your website address</label>
+              <input id="site-check-url" type="url" name="url" placeholder="https://yourwebsite.com" required>
+              <button type="submit">Run the check ↗</button>
+            </form>
+            <p class="site-check-note">The report opens on <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">Google PageSpeed Insights</a>.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="container section">
@@ -73,12 +108,14 @@
 
     <section class="dark">
       <div class="container section">
-        <div class="section-head"><div><div class="eyebrow">How we work</div><h2>Clear thinking. Careful build. Useful result.</h2></div><p>You’ll know what we’re solving, what we’re building and what happens next.</p></div>
-        <div class="process">
-          <div class="step"><strong>01 / DISCOVER</strong><h3>Understand</h3><p>We learn about your goals, customers and current setup.</p></div>
-          <div class="step"><strong>02 / PLAN</strong><h3>Find the focus</h3><p>We agree on the right scope and the most useful next steps.</p></div>
-          <div class="step"><strong>03 / BUILD</strong><h3>Make it work</h3><p>We design and connect the pieces your business needs.</p></div>
-          <div class="step"><strong>04 / HAND OVER</strong><h3>Launch with clarity</h3><p>We review the details and make sure you know how to use what we built.</p></div>
+        <div class="section-head"><div><div class="eyebrow">The BAM project route</div><h2>From first conversation to a clear handover.</h2></div><p>A focused sequence keeps decisions simple and makes sure you know what happens at every step.</p></div>
+        <div class="project-steps">
+          <article class="project-step"><span>01</span><div><h3>Listen</h3><p>Understand your goals, customers and what feels stuck.</p></div></article>
+          <article class="project-step"><span>02</span><div><h3>Map</h3><p>Review your current website, tools and customer journey.</p></div></article>
+          <article class="project-step"><span>03</span><div><h3>Focus</h3><p>Agree the scope, priorities and a sensible first move.</p></div></article>
+          <article class="project-step"><span>04</span><div><h3>Build</h3><p>Design and connect the pieces included in the project.</p></div></article>
+          <article class="project-step"><span>05</span><div><h3>Launch</h3><p>Review the details and prepare the work to go live.</p></div></article>
+          <article class="project-step"><span>06</span><div><h3>Hand over</h3><p>Walk through what’s ready and discuss useful next steps.</p></div></article>
         </div>
       </div>
     </section>
@@ -90,6 +127,15 @@
     </section>
   </main>
 
-  <footer class="container footer"><strong>BAM Agency</strong><span>Websites · CRM · Automation · AI</span><a href="mailto:rodayobj@icloud.com">rodayobj@icloud.com</a></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand"><a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a><p>Digital systems for business momentum.</p></div>
+        <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+        <div class="footer-group"><h2>Connect</h2><a href="mailto:rodayobj@icloud.com">rodayobj@icloud.com ↗</a><div class="social-note"><span>Socials</span><p>Our channels are coming soon.</p></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 BAM Agency</span><span>Websites · CRM · Automation · AI</span><a href="privacy.html">Privacy policy ↗</a></div>
+    </div>
+  </footer>
 </body>
 </html>

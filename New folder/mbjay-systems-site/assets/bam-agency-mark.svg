@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="BAM Agency monogram">
+  <rect width="48" height="48" rx="13" fill="#171816"/>
+  <path d="M11 9h14.3c7.4 0 11.4 3.7 11.4 9.2 0 3.5-1.7 5.9-4.8 7.1 3.9 1 6.1 3.6 6.1 7.4 0 6.1-4.4 9.3-12.2 9.3H11V9Zm7.2 6.3v7.2h7c2.8 0 4.2-1.1 4.2-3.6s-1.5-3.6-4.3-3.6h-6.9Zm0 13.1v7.4h7.8c3 0 4.5-1.2 4.5-3.7 0-2.5-1.5-3.7-4.6-3.7h-7.7Z" fill="#fff"/>
+  <path d="m29.2 10.5 7.6-6.2v5h6v3.8h-6v5l-7.6-6.3v-1.3Z" fill="#c8ff3d"/>
+</svg>

@@ -1,6 +1,6 @@
-# MBJAY Systems
+# BAM Agency
 
-Official MBJAY Systems website: websites, CRM, automation and AI.
+Official BAM Agency website: websites, CRM, automation and AI.
 
 ## Structure
 - `index.html` — Home
