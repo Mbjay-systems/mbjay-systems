@@ -10,7 +10,22 @@
 <body>
   <header class="container nav">
     <a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a>
-    <nav class="navlinks" aria-label="Main navigation"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <nav class="navlinks" aria-label="Main navigation">
+      <details class="nav-dropdown">
+        <summary>Services</summary>
+        <div class="mega-panel">
+          <div class="mega-top"><div><span class="eyebrow">BAM capabilities</span><p>Choose the part of your customer journey you want to strengthen.</p></div><a href="services.html">All services ↗</a></div>
+          <div class="mega-grid">
+            <a href="services.html#websites"><span>01</span><strong>Websites</strong><small>Present your offer and make the next step clear.</small></a>
+            <a href="services.html#crm"><span>02</span><strong>CRM & leads</strong><small>Keep enquiries and opportunities organised.</small></a>
+            <a href="services.html#automation"><span>03</span><strong>Automation</strong><small>Connect tools and reduce repeat admin.</small></a>
+            <a href="services.html#ai-workflows"><span>04</span><strong>AI workflows</strong><small>Apply AI to a specific business process.</small></a>
+          </div>
+          <div class="mega-bottom"><span>Not sure where to start?</span><a href="contact.html">Tell us what’s getting in the way ↗</a></div>
+        </div>
+      </details>
+      <a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </nav>
     <a class="nav-cta" href="contact.html">Start a project ↗</a>
     <details class="mobile-nav"><summary aria-label="Open menu">Menu</summary><nav class="mobile-menu-panel" aria-label="Mobile navigation"><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="btn primary" href="contact.html">Start a project ↗</a></nav></details>
   </header>
@@ -23,16 +38,33 @@
     <section class="container section" style="padding-top:20px">
       <div class="contact-grid">
         <div class="contact-box">
-          <div class="eyebrow">Project enquiries</div>
-          <h2>Start with a few details.</h2>
-          <p>Tell us what your business does, what you’re trying to improve and what a good outcome would look like. You don’t need a finished brief.</p>
-          <a class="contact-link" href="mailto:rodayobj@icloud.com?subject=BAM%20Agency%20Project%20Enquiry&body=Business%20or%20project%3A%0AWhat%20I%20want%20to%20improve%3A%0AGoal%3A%0ATimeline%20(if%20known)%3A">Email BAM Agency ↗</a>
+          <div class="eyebrow">Project enquiry</div>
+          <h2>Give us the starting point.</h2>
+          <p>You don’t need a finished brief. Share what you know and we’ll take it from there.</p>
+          <form class="proposal-form" id="project-enquiry-form">
+            <div class="proposal-fields">
+              <label>Your name *<input name="name" autocomplete="name" required></label>
+              <label>Email address *<input name="email" type="email" autocomplete="email" required></label>
+              <label>Business or company<input name="company" autocomplete="organization"></label>
+              <label>Website, if you have one<input name="website" type="url" placeholder="https://"></label>
+              <label class="field-wide">What would you like help with?
+                <select name="service"><option value="Not sure yet">Choose a starting point</option><option>Website or landing page</option><option>CRM and lead management</option><option>Automation and integrations</option><option>AI workflow</option><option>Monthly support after launch</option></select>
+              </label>
+              <label class="field-wide">What are you trying to improve? *<textarea name="message" rows="4" required></textarea></label>
+            </div>
+            <button class="btn primary proposal-submit" type="submit">Prepare my project enquiry ↗</button>
+            <p class="form-note">Your email app will open with your details ready. Review and send the message to reach us. See our <a href="privacy.html">privacy policy</a>.</p>
+          </form>
         </div>
         <div class="contact-box">
-          <div class="eyebrow">A good place to begin</div>
-          <h2>What’s getting in the way?</h2>
-          <p>Maybe enquiries are slipping through, your website no longer represents the business, or your team is doing too much manually. Start with the problem you want solved.</p>
-          <a class="contact-link" href="services.html">See how we can help ↗</a>
+          <div class="eyebrow">What happens next</div>
+          <h2>A clear route from enquiry to action.</h2>
+          <div class="contact-next">
+            <div><span>01</span><p><strong>We understand the goal.</strong><br>We start with your business, what is getting in the way and what you want to change.</p></div>
+            <div><span>02</span><p><strong>We shape the right scope.</strong><br>We’ll talk through a practical first project and the next steps.</p></div>
+            <div><span>03</span><p><strong>We can keep building together.</strong><br>Where useful, we can discuss ongoing analytics, updates and support after launch.</p></div>
+          </div>
+          <a class="contact-link" href="mailto:rodayobj@icloud.com">Or email us directly ↗</a>
         </div>
       </div>
     </section>
@@ -40,12 +72,31 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-main">
-        <div class="footer-brand"><a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a><p>Digital systems for business momentum.</p></div>
-        <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-        <div class="footer-group"><h2>Connect</h2><a href="mailto:rodayobj@icloud.com">rodayobj@icloud.com ↗</a><div class="social-note"><span>Socials</span><p>Our channels are coming soon.</p></div></div>
+        <div class="footer-brand"><a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a><p>Digital systems for business momentum.</p><a class="footer-email" href="mailto:rodayobj@icloud.com">rodayobj@icloud.com ↗</a><p class="social-note">Social channels coming soon.</p></div>
+        <nav class="footer-group" aria-label="Services"><h2>Services</h2><a href="services.html#websites">Websites</a><a href="services.html#crm">CRM & lead systems</a><a href="services.html#automation">Automation</a><a href="services.html#ai-workflows">AI workflows</a><a href="index.html#ongoing-support">Monthly support</a></nav>
+        <nav class="footer-group" aria-label="Company"><h2>Company</h2><a href="about.html">About BAM</a><a href="work.html">Selected work</a><a href="contact.html">Start a project</a></nav>
+        <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="index.html#site-check">Website check</a><a href="about.html#faqs">FAQs</a><a href="privacy.html">Privacy policy</a></nav>
       </div>
-      <div class="footer-bottom"><span>© 2026 BAM Agency</span><span>Websites · CRM · Automation · AI</span><a href="privacy.html">Privacy policy ↗</a></div>
+      <div class="footer-bottom"><span>© 2026 BAM Agency</span><span>Websites · CRM · Automation · AI</span><a href="privacy.html">Privacy ↗</a></div>
     </div>
   </footer>
+  <script>
+    document.getElementById("project-enquiry-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = new FormData(event.currentTarget);
+      const subject = "BAM Agency project enquiry";
+      const body = [
+        `Name: ${fields.get("name")}`,
+        `Email: ${fields.get("email")}`,
+        `Business: ${fields.get("company") || "Not provided"}`,
+        `Website: ${fields.get("website") || "Not provided"}`,
+        `Interested in: ${fields.get("service")}`,
+        "",
+        "What I would like to improve:",
+        fields.get("message")
+      ].join("\n");
+      window.location.href = `mailto:rodayobj@icloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
 </body>
 </html>

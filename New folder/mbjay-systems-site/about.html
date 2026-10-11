@@ -11,10 +11,20 @@
   <header class="container nav">
     <a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a>
     <nav class="navlinks" aria-label="Main navigation">
-      <a href="services.html">Services</a>
-      <a href="work.html">Work</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <details class="nav-dropdown">
+        <summary>Services</summary>
+        <div class="mega-panel">
+          <div class="mega-top"><div><span class="eyebrow">BAM capabilities</span><p>Choose the part of your customer journey you want to strengthen.</p></div><a href="services.html">All services ↗</a></div>
+          <div class="mega-grid">
+            <a href="services.html#websites"><span>01</span><strong>Websites</strong><small>Present your offer and make the next step clear.</small></a>
+            <a href="services.html#crm"><span>02</span><strong>CRM & leads</strong><small>Keep enquiries and opportunities organised.</small></a>
+            <a href="services.html#automation"><span>03</span><strong>Automation</strong><small>Connect tools and reduce repeat admin.</small></a>
+            <a href="services.html#ai-workflows"><span>04</span><strong>AI workflows</strong><small>Apply AI to a specific business process.</small></a>
+          </div>
+          <div class="mega-bottom"><span>Not sure where to start?</span><a href="contact.html">Tell us what’s getting in the way ↗</a></div>
+        </div>
+      </details>
+      <a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav>
     <a class="nav-cta" href="contact.html">Start a project ↗</a>
     <details class="mobile-nav">
@@ -63,7 +73,7 @@
       <div class="service-row"><span class="num">03</span><h3>Save time</h3><p>Useful automation and AI workflows for repetitive tasks and everyday business processes.</p></div>
     </section>
 
-    <section class="faq-section">
+    <section class="faq-section" id="faqs">
       <div class="container section">
         <div class="section-head">
           <div><div class="eyebrow">A few useful answers</div><h2>Good to know before we start.</h2></div>
@@ -74,6 +84,7 @@
           <details class="faq-item"><summary>What services do you offer?</summary><p>Websites and landing pages, CRM and lead-management setup, business automation, and practical AI workflows.</p></details>
           <details class="faq-item"><summary>How does a project get started?</summary><p>Start with a conversation about your business, what is getting in the way, and what you want to improve. We can then agree on a sensible scope and next steps.</p></details>
           <details class="faq-item"><summary>Can you work with my existing website or CRM?</summary><p>Often, yes. We can look at what you already use and discuss whether it makes sense to improve it, connect it to other tools, or replace part of it.</p></details>
+          <details class="faq-item"><summary>Can we keep working together after launch?</summary><p>Yes. We can agree on monthly support after handover. Depending on what you need, that can include analytics setup and review, regular website updates, and continued improvements to your CRM and workflows.</p></details>
           <details class="faq-item"><summary>How much does a project cost, and how long will it take?</summary><p>It depends on the scope, features and tools involved. After an initial conversation, we can define the work and provide a project-specific estimate and timeline.</p></details>
         </div>
       </div>
@@ -89,12 +100,23 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-main">
-        <div class="footer-brand"><a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a><p>Digital systems for business momentum.</p></div>
-        <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="services.html">Services</a><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
-        <div class="footer-group"><h2>Connect</h2><a href="mailto:rodayobj@icloud.com">rodayobj@icloud.com ↗</a><div class="social-note"><span>Socials</span><p>Our channels are coming soon.</p></div></div>
+        <div class="footer-brand"><a class="logo" href="index.html"><img class="logo-mark" src="assets/bam-agency-mark.svg" alt=""><span class="logo-wordmark"><strong>BAM</strong> Agency</span></a><p>Digital systems for business momentum.</p><a class="footer-email" href="mailto:rodayobj@icloud.com">rodayobj@icloud.com ↗</a><p class="social-note">Social channels coming soon.</p></div>
+        <nav class="footer-group" aria-label="Services"><h2>Services</h2><a href="services.html#websites">Websites</a><a href="services.html#crm">CRM & lead systems</a><a href="services.html#automation">Automation</a><a href="services.html#ai-workflows">AI workflows</a><a href="index.html#ongoing-support">Monthly support</a></nav>
+        <nav class="footer-group" aria-label="Company"><h2>Company</h2><a href="about.html">About BAM</a><a href="work.html">Selected work</a><a href="contact.html">Start a project</a></nav>
+        <nav class="footer-group" aria-label="Explore"><h2>Explore</h2><a href="index.html#site-check">Website check</a><a href="about.html#faqs">FAQs</a><a href="privacy.html">Privacy policy</a></nav>
       </div>
-      <div class="footer-bottom"><span>© 2026 BAM Agency</span><span>Websites · CRM · Automation · AI</span><a href="privacy.html">Privacy policy ↗</a></div>
+      <div class="footer-bottom"><span>© 2026 BAM Agency</span><span>Websites · CRM · Automation · AI</span><a href="privacy.html">Privacy ↗</a></div>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        document.querySelectorAll(".faq-item").forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
