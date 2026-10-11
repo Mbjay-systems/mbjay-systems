@@ -42,10 +42,8 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #84b900; outline-off
 .nav-dropdown { position: relative; }
 .nav-dropdown summary { display: flex; align-items: center; gap: 7px; cursor: pointer; list-style: none; transition: color .18s ease; }
 .nav-dropdown summary::-webkit-details-marker { display: none; }
-.nav-dropdown summary::after { content: "⌄"; color: #777970; font-size: 13px; transition: transform .18s ease; }
 .nav-dropdown[open] summary, .nav-dropdown summary:hover { color: #cf1746; }
-.nav-dropdown[open] summary::after { transform: rotate(180deg); }
-.mega-panel { position: absolute; top: calc(100% + 23px); left: 50%; z-index: 20; display: none; width: min(690px, calc(100vw - 40px)); padding: 22px; transform: translateX(-38%); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 20px 60px #1112; }
+.mega-panel { position: absolute; top: calc(100% + 8px); left: 50%; z-index: 20; display: none; width: min(690px, calc(100vw - 40px)); padding: 22px; transform: translateX(-38%); border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); box-shadow: 0 20px 60px #1112; }
 .nav-dropdown[open] .mega-panel { display: block; }
 .mega-top { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 15px; border-bottom: 1px solid var(--line); }
 .mega-top .eyebrow { font-size: 10px; }
@@ -90,7 +88,7 @@ a:focus-visible, summary:focus-visible { outline: 3px solid #84b900; outline-off
   line-height: .98;
   letter-spacing: -.075em;
 }
-.page-hero h1 { max-width: 900px; font-size: clamp(42px, 4.8vw, 62px); line-height: 1.02; }
+.page-hero h1 { max-width: 900px; font-size: clamp(40px, 4.4vw, 56px); line-height: 1.04; }
 .hero h1 em { color: #cf1746; font-style: normal; text-decoration: none; }
 .hero-copy > p, .page-hero > p { max-width: 650px; color: var(--muted); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.6; }
 .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 25px; color: #53554f; font-size: 12px; font-weight: 650; }
@@ -192,6 +190,28 @@ a.work-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #111111
 .service-row:hover { padding-left: 10px; border-color: #cf1746; }
 .service-row h3 { margin: 0; font-size: 24px; line-height: 1.2; letter-spacing: -.045em; }
 .service-row p { margin: 0; color: var(--muted); }
+.service-detail-section { padding-top: 16px; }
+.service-detail-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, .7fr); column-gap: clamp(24px, 6vw, 72px); align-items: end; margin-bottom: 30px; }
+.service-detail-intro .eyebrow { grid-column: 1 / -1; }
+.service-detail-intro h2 { max-width: 580px; margin: 10px 0 0; font-size: clamp(32px, 3.7vw, 44px); line-height: 1.04; letter-spacing: -.06em; }
+.service-detail-intro > p { max-width: 430px; margin: 0 0 3px; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.service-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.service-detail-card { display: flex; flex-direction: column; min-width: 0; padding: clamp(21px, 2.6vw, 30px); border: 1px solid var(--line); border-radius: 10px; background: var(--surface); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; scroll-margin-top: 24px; }
+.service-detail-card:hover { transform: translateY(-3px); border-color: #cf1746; box-shadow: 0 14px 32px #1111110c; }
+.service-card-top { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.service-index { display: grid; width: 38px; height: 38px; flex: 0 0 auto; place-items: center; border-radius: 50%; background: #cf1746; color: #fff; font-size: 12px; font-weight: 850; }
+.service-category { color: #777970; font-size: 10px; font-weight: 850; letter-spacing: .13em; text-transform: uppercase; }
+.service-detail-card h3 { margin: 0 0 8px; font-size: 24px; line-height: 1.15; letter-spacing: -.045em; }
+.service-card-lead { margin: 0 0 12px; color: #33342f; font-size: 16px; font-weight: 700; line-height: 1.5; }
+.service-detail-card > p:not(.service-card-lead) { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.service-detail-card h4 { margin: 22px 0 8px; color: #777970; font-size: 10px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+.service-detail-card ul { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; color: #4e5049; font-size: 13px; line-height: 1.55; }
+.service-detail-card li { position: relative; padding-left: 17px; }
+.service-detail-card li::before { content: "✓"; position: absolute; left: 0; color: #cf1746; font-weight: 850; }
+.service-platforms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+.service-platforms span { padding: 5px 9px; border: 1px solid var(--line); border-radius: 999px; color: #5f615a; font-size: 10px; line-height: 1.3; }
+.service-card-link { display: inline-flex; align-items: center; gap: 7px; align-self: flex-start; margin-top: auto; padding-top: 22px; color: #b20d39; font-size: 13px; font-weight: 800; text-underline-offset: 4px; }
+.service-card-link:hover { text-decoration: underline; }
 .contact-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
 .contact-box { padding: 30px; background: var(--surface); border: 1px solid var(--line); }
 .contact-box h2 { margin: 30px 0 10px; font-size: 30px; line-height: 1.04; letter-spacing: -.055em; }
@@ -300,6 +320,8 @@ a.work-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #111111
   .contact-grid { grid-template-columns: 1fr; }
   .service-row { grid-template-columns: 38px 1fr; gap: 10px 14px; padding: 23px 0; }
   .service-row p { grid-column: 2; }
+  .service-detail-intro { grid-template-columns: 1fr; gap: 14px; }
+  .service-detail-intro > p { max-width: 620px; }
   .footer-main { grid-template-columns: 1fr 1fr; gap: 28px; }
   .footer-brand { grid-column: 1 / -1; }
   .difference-intro { grid-template-columns: 1fr; gap: 18px; margin-bottom: 30px; }
@@ -340,6 +362,9 @@ a.work-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px #111111
   .work-copy { padding: 17px; }
   .page-hero { padding: 52px 0 36px; }
   .service-row h3 { font-size: 22px; }
+  .service-detail-grid { grid-template-columns: 1fr; gap: 12px; }
+  .service-detail-card { padding: 22px; }
+  .service-detail-card h3 { font-size: 22px; }
   .contact-box { padding: 22px; }
   .contact-box h2 { margin-top: 23px; font-size: 30px; }
   .proposal-fields { grid-template-columns: 1fr; gap: 13px; }
